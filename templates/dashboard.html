@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="container">
+  <h1>Dashboard</h1>
+
+  <!-- Create Project -->
+  <div class="card">
+    <h3>Create Project</h3>
+    <input id="projectName" placeholder="Project Name">
+    <input id="createdBy" placeholder="Created By User ID">
+    <button onclick="createProject()">Create</button>
+  </div>
+
+  <!-- Create Task -->
+  <div class="card">
+    <h3>Create Task</h3>
+    <input id="taskTitle" placeholder="Title">
+    <input id="taskStatus" placeholder="Status (pending/completed)">
+    <input id="projectId" placeholder="Project ID">
+    <input id="assignedTo" placeholder="Assign To">
+    <input id="deadline" placeholder="Deadline">
+    <button onclick="createTask()">Create Task</button>
+  </div>
+
+  <!-- Tasks -->
+  <div class="card">
+    <h3>Tasks</h3>
+    <button onclick="getTasks()">Load Tasks</button>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Title</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody id="taskTable"></tbody>
+    </table>
+  </div>
+
+  <!-- Update -->
+  <div class="card">
+    <h3>Update Status</h3>
+    <input id="taskId" placeholder="Task ID">
+    <input id="newStatus" placeholder="New Status">
+    <button onclick="updateTask()">Update</button>
+  </div>
+
+  <!-- Dashboard -->
+  <div class="card">
+    <h3>Stats</h3>
+    <button onclick="loadDashboard()">Load</button>
+    <p>Total: <span id="totalTasks">0</span></p>
+    <p>Completed: <span id="completedTasks">0</span></p>
+    <p>Pending: <span id="pendingTasks">0</span></p>
+  </div>
+
+</div>
+
+<script src="/static/script.js"></script>
+</body>
+</html>
