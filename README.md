@@ -49,7 +49,3 @@ Admins can create projects, assign tasks, view all tasks, and update any task st
 
 Members can view their assigned tasks and update the status of those tasks.
 
-## Submission
-
-- Live URL: add your deployed app URL here
-- GitHub repo: add your repository URL here
